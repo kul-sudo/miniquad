@@ -80,10 +80,10 @@ pub trait Clipboard: Send + Sync {
 
 pub mod module;
 
-#[cfg(target_os = "linux", target_os = "freebsd")]
+#[cfg(any(target_os = "linux", target_os = "freebsd"))]
 pub mod linux_x11;
 
-#[cfg(target_os = "linux", target_os = "freebsd")]
+#[cfg(any(target_os = "linux", target_os = "freebsd"))]
 pub mod linux_wayland;
 
 #[cfg(target_os = "android")]
